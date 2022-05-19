@@ -1,0 +1,138 @@
+/* 
+- Mobile: 375px
+- Desktop: 1440px
+ */
+* {
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+section {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#af67e9), to(#6565e7));
+  background-image: linear-gradient(to bottom, #af67e9, #6565e7);
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 1.5rem;
+}
+
+.illustration-box {
+  width: 100%;
+}
+
+.illustration-wrapper {
+  width: 80%;
+  max-width: 400px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.pattern {
+  width: 100%;
+}
+
+.pattern > * {
+  width: 100%;
+}
+
+.woman {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translateY(-60%);
+          transform: translateY(-60%);
+}
+
+.woman > * {
+  width: 100%;
+}
+
+.my-accordion-item {
+  border-bottom: 2px solid #e7e7e9;
+}
+
+.my-accordion-header h2:hover {
+  cursor: pointer;
+  color: #f47c57;
+}
+
+.my-accordion-body {
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.show-my-accordion-body h2 {
+  font-weight: 800;
+}
+
+.show-my-accordion-body .my-accordion-body {
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.my-accordion-btn {
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  outline: none;
+  border: none;
+  background: none;
+}
+
+.show-my-accordion-body .my-accordion-btn {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+@media (min-width: 1200px) {
+  .card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    max-width: 1115px !important;
+    margin: 0 auto;
+  }
+  .card > * {
+    width: 50%;
+  }
+  .illustration-wrapper {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border: 1px solid transparent;
+  }
+  .woman {
+    bottom: 0;
+    top: unset;
+    -webkit-transform: translate(-19%, -19%);
+            transform: translate(-19%, -19%);
+  }
+  .pattern > * {
+    -webkit-transform: scale(2) translate(-34%, -9%);
+            transform: scale(2) translate(-34%, -9%);
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+  }
+  .box {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    -webkit-transform: translate(-50%, -80%);
+            transform: translate(-50%, -80%);
+  }
+  .content-box {
+    padding: 5rem 4rem 5rem 0;
+  }
+  .content-title {
+    text-align: left !important;
+    padding: 2rem 0;
+  }
+}
+/*# sourceMappingURL=style.css.map */

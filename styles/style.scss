@@ -1,0 +1,164 @@
+//  ================= VARIABLES ===================
+// text
+$-clr-very-dark-desaturated-blue: hsl(238, 29%, 16%);
+$-clr-soft-red: hsl(14, 88%, 65%);
+
+// background gradient
+$bg-soft-violet: hsl(273, 75%, 66%);
+$bg-soft-blue: hsl(240, 73%, 65%);
+
+// divider
+$divider-light-grayish-blue: hsl(240, 5%, 91%);
+
+// font
+$ff-kumbh-sans: 'Kumbh Sans', sans-serif;
+//  ================= BREAKPOINTS ===================
+/* 
+- Mobile: 375px
+- Desktop: 1440px
+ */
+
+//  ================= GLOBAL STYLE ===================
+
+* {
+    font-family: $ff-kumbh-sans;
+}
+
+//  ================= SECTION STYLE ===================
+section {
+    background-image: linear-gradient(to bottom, $bg-soft-violet, $bg-soft-blue);
+}
+
+//  ================= CARD STYLE ===================
+.card {
+    background-color: #fff;
+    border-radius: 1.5rem;
+}
+
+// illustration
+.illustration-box {
+    width: 100%;
+}
+
+.illustration-wrapper {
+    width: 80%;
+    max-width: 400px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.pattern {
+    width: 100%;
+    & > * {
+        width: 100%;
+    }
+}
+
+.woman {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(-60%);
+    & > * {
+        width: 100%;
+    }
+}
+
+// content
+.my-accordion-item {
+    border-bottom: 2px solid $divider-light-grayish-blue;
+}
+
+.my-accordion-header h2:hover {
+    cursor: pointer;
+    color: $-clr-soft-red;
+}
+
+.my-accordion-body {
+    height: 0;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+// animation
+
+.show-my-accordion-body h2 {
+    font-weight: 800;
+}
+
+.show-my-accordion-body .my-accordion-body {
+    transition: all 0.4s ease;
+}
+
+.my-accordion-btn {
+    transition: all 0.4s ease;
+    outline: none;
+    border: none;
+    background: none;
+}
+
+.show-my-accordion-body  .my-accordion-btn {
+    transform: rotate(180deg);
+}
+
+@media (min-width: 1200px) {
+
+    //  ================= CARD STYLE ===================
+    .card {
+        display: flex;
+        flex-direction: row;
+        max-width: 1115px !important;
+        margin: 0 auto;
+        & > * {
+            width: 50%;
+        }
+    }
+
+    // illustration
+    .illustration-wrapper {
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+        overflow: hidden;
+        border: 1px solid transparent;
+    }
+
+    .woman {
+        bottom: 0;
+        top: unset;
+        transform: translate( -19%,-19% );
+
+        // animate in js 
+        // transform: translate( -19%,/* -19%  */calc(-19% + 72px));
+    }
+
+    .pattern > * {
+        transform: scale(2) translate(-34%, -9%);
+        transition: all 0.4s ease;
+
+        // animate in js 
+        // transform: scale(2) translate(-34%, calc(-3% + 72px) /* -3% */);
+    }
+
+    .box {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transform: translate(-50%, -80%);
+
+        // animate in js
+        // transform: translate(-50%, calc(-100% + 72px) /* -100% */);
+    }
+
+    // content
+    .content-box {
+        padding: 5rem 4rem 5rem 0;
+    }
+
+    .content-title {
+        text-align: left !important;
+        padding: 2rem 0;
+    }
+
+}
