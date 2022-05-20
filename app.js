@@ -59,7 +59,11 @@ myAccordionItems.forEach(accordion => {
                             for (let i = 0; i < pattern.children.length; i++) {
                                 pattern.children[i].style.transform = `scale(2) translate(-34%, calc(-9% + ${patternWidth}px))`;
                             };
-                        };
+                        } else {
+                            for (let i = 0; i < pattern.children.length; i++) {
+                                pattern.children[i].style.transform = `scale(2) translate(-34%, -9%)`;
+                            };
+                        }
                     };
 
                 } else {

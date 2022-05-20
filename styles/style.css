@@ -6,7 +6,7 @@
   font-family: "Kumbh Sans", sans-serif;
 }
 
-section {
+main {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#af67e9), to(#6565e7));
   background-image: linear-gradient(to bottom, #af67e9, #6565e7);
 }
@@ -64,8 +64,13 @@ section {
   transition: all 0.4s ease;
 }
 
+.my-accordion-body p {
+  opacity: .5;
+}
+
 .show-my-accordion-body h2 {
   font-weight: 800;
+  color: #1d1e35;
 }
 
 .show-my-accordion-body .my-accordion-body {

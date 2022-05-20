@@ -25,7 +25,7 @@ $ff-kumbh-sans: 'Kumbh Sans', sans-serif;
 }
 
 //  ================= SECTION STYLE ===================
-section {
+main {
     background-image: linear-gradient(to bottom, $bg-soft-violet, $bg-soft-blue);
 }
 
@@ -79,12 +79,17 @@ section {
     height: 0;
     overflow: hidden;
     transition: all 0.4s ease;
+    & p {
+        opacity: .5;
+    }
 }
 
 // animation
 
 .show-my-accordion-body h2 {
     font-weight: 800;
+    color: $-clr-very-dark-desaturated-blue;
+    
 }
 
 .show-my-accordion-body .my-accordion-body {
